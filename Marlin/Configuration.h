@@ -46,7 +46,7 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          -3
+#define NOZZLE_X          0 
 #define NOZZLE_Y          0
 
 /**
@@ -71,7 +71,7 @@
  * Z-Probe type (must be none or one of them)
  * If a Z-Probe type is selected, a Bed Leveling type other than MANUAL must be selected.
  */
-//#define BLTOUCH         // ANTClabs BLTouch sensor (might also work with clones)
+#define BLTOUCH         // ANTClabs BLTouch sensor (might also work with clones)
 //#define SN04          // Green sensor
 //#define INDUCTIVE_NO  // Normally open inductive sensor
 //#define INDUCTIVE_NC  // Normally closed inductive sensor
@@ -83,9 +83,9 @@
  */
 //#define TRIPOINT
 //#define LINEAR
-//#define BILINEAR
+#define BILINEAR
 //#define UBL
-#define MANUAL
+//#define MANUAL
 
 /** TODO!
  * Z-Probe offset from nozzle (https://github.com/JimBrown/MarlinTarantula/wiki/How-to-determine-your-Z-Probe-offset)
@@ -93,8 +93,8 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       50
-#define SENSOR_FRONT       53
+#define SENSOR_RIGHT       0
+#define SENSOR_FRONT       38
 #define SENSOR_BEHIND      0
 
 /**
@@ -168,8 +168,8 @@
  *       CUSTOM_USER_MENUS for PETG to appear, along with PLA and ABS, under Custom Commands.
  *       PLA and ABS will appear under both Custom Command and Prepare.
  */
-#define Hot_PLA 		200
-#define Bed_PLA 		 65
+#define Hot_PLA 		230
+#define Bed_PLA 		 50
 
 #define Hot_ABS 		240
 #define Bed_ABS 		100
@@ -973,7 +973,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER SENSOR_RIGHT - SENSOR_LEFT  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER SENSOR_BEHIND - SENSOR_FRONT // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 13500
